@@ -20,7 +20,7 @@ description: "Task list for implementing and validating task persistence"
 
 **Purpose**: Add an accessible error surface shared by saved-task loading and saving before implementing either storage path.
 
-- [ ] T001 Add a hidden alert with ID `storage-error` using the existing `message message-error` styles in `index.html`
+- [x] T001 Add a hidden alert with ID `storage-error` using the existing `message message-error` styles in `index.html`
 
 **Checkpoint**: The page has an accessible place to report storage failures; story implementation can begin.
 
@@ -34,17 +34,17 @@ description: "Task list for implementing and validating task persistence"
 
 ### Tests for User Story 1
 
-- [ ] T002 [US1] Run the save/reload and failure scenarios in `specs/002-save-tasks/quickstart.md` against the current app and record the expected failing persistence cases in `specs/002-save-tasks/quickstart.md`
+- [x] T002 [US1] Run the save/reload and failure scenarios in `specs/002-save-tasks/quickstart.md` against the current app and record the expected failing persistence cases in `specs/002-save-tasks/quickstart.md`
 
 ### Implementation for User Story 1
 
-- [ ] T003 [US1] Parse `todo-app.tasks.v1` as a whole JSON array and validate every record has a non-empty trimmed string description in `app.js`
-- [ ] T004 [US1] Load validated saved tasks before the initial render and report read or malformed-data failures through `#storage-error` in `app.js`
-- [ ] T005 [US1] Persist the candidate array before changing task state or clearing the input; on write failure, keep the list and input unchanged and report through `#storage-error` in `app.js`
+- [x] T003 [US1] Parse `todo-app.tasks.v1` as a whole JSON array and validate every record has a non-empty trimmed string description in `app.js`
+- [x] T004 [US1] Load validated saved tasks before the initial render and report read or malformed-data failures through `#storage-error` in `app.js`
+- [x] T005 [US1] Persist the candidate array before changing task state or clearing the input; on write failure, keep the list and input unchanged and report through `#storage-error` in `app.js`
 
 ### Validation for User Story 1
 
-- [ ] T006 [US1] Run the valid-add, reload, ordering, duplicate, whitespace, malformed-data, and write-failure scenarios in `specs/002-save-tasks/quickstart.md` and record outcomes there
+- [x] T006 [US1] Run the valid-add, reload, ordering, duplicate, whitespace, malformed-data, and write-failure scenarios in `specs/002-save-tasks/quickstart.md` and record outcomes there
 
 **Checkpoint**: User Story 1 is complete when valid tasks survive reload, invalid descriptions remain unsaved, and storage failures are announced without a false success.
 
@@ -64,8 +64,8 @@ No User Story 1 tasks can safely run in parallel: T003, T004, and T005 all modif
 
 ### Documentation and Validation for User Story 2
 
-- [ ] T007 [P] [US2] Update the run instructions and browser-local persistence scope in `README.md`
-- [ ] T008 [US2] Run the close/reopen and different-profile scenarios in `specs/002-save-tasks/quickstart.md` and record outcomes there
+- [x] T007 [P] [US2] Update the run instructions and browser-local persistence scope in `README.md`
+- [x] T008 [US2] Run the close/reopen and different-profile scenarios in `specs/002-save-tasks/quickstart.md` and record outcomes there
 
 **Checkpoint**: User Story 2 is complete when same-profile return visits restore tasks and the README makes the local-only boundary clear.
 
@@ -75,7 +75,7 @@ No User Story 1 tasks can safely run in parallel: T003, T004, and T005 all modif
 
 **Purpose**: Verify the complete feature and leave the validation guide consistent with the delivered behavior.
 
-- [ ] T009 Run every scenario in `specs/002-save-tasks/quickstart.md` against the completed app and record the final verification results in `specs/002-save-tasks/quickstart.md`
+- [x] T009 Run every scenario in `specs/002-save-tasks/quickstart.md` against the completed app and record the final verification results in `specs/002-save-tasks/quickstart.md`
 
 ---
 

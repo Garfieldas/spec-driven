@@ -29,6 +29,26 @@ Open `http://localhost:8000` in a browser. No package installation, backend, or 
 9. To check a write failure, in the console run `Storage.prototype.setItem = function () { throw new DOMException("Blocked", "QuotaExceededError"); };`, then try to add a task. Expected: the list is unchanged, the input retains the description, and an accessible not-saved error appears. Reload the page to restore the browser's normal method behavior.
 10. Close and reopen the app at the same URL and browser profile. Expected: successfully saved tasks remain present. A different origin or browser profile does not share this list.
 
+## Baseline Before Implementation
+
+Checked in Chromium at `http://127.0.0.1:8000` on 2026-09-26:
+
+- Adding `Buy milk` displayed it, but `todo-app.tasks.v1` remained unset; reloading showed the empty state.
+- Malformed stored JSON remained untouched, but the app showed no restoration warning.
+- When `Storage.prototype.setItem` was made to throw, adding `Retry me` still displayed the task, cleared the input, and announced success without a storage error.
+
+## Verification Record
+
+Verified in Chromium at `http://127.0.0.1:8000` on 2026-09-26:
+
+- A valid trimmed task was saved immediately; the input cleared, and the task and insertion order remained after reload.
+- Duplicate descriptions remained separate ordered entries. Whitespace-only input was rejected without changing the saved list.
+- Malformed JSON was left untouched and produced a restoration alert with no partial task list.
+- A simulated `QuotaExceededError` left the current list and input unchanged and displayed the not-saved alert.
+- A simulated `SecurityError` while reading browser storage left the page usable and displayed the restoration alert.
+- `Return visit task` appeared in a new page and after closing and reopening the app in the same browser context; a separate browser context at the same origin showed an empty list.
+- The full quickstart sequence passed in Chromium: clean start, immediate add, reload, insertion order, duplicate task, whitespace rejection, trimming, literal HTML-like text, blocked write, malformed stored data, same-profile return visit, and isolated-profile storage.
+
 ## References
 
 - Storage shape and validation rules: [data-model.md](data-model.md)

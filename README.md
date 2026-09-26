@@ -12,4 +12,6 @@ package installation, backend, or database.
 Enter a description and choose **Add task**. Blank or whitespace-only descriptions are rejected;
 accepted descriptions are trimmed and appear immediately in the list.
 
-Tasks are held only in page memory. Reloading or closing the page clears the list.
+Tasks are saved in browser storage for the current origin and browser profile. They remain after
+reloading or reopening the app in that profile, but are not synchronized to another browser or
+device. Clearing the browser's stored site data may remove them.
