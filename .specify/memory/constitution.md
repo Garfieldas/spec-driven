@@ -1,50 +1,59 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!--
+Sync Impact Report
+Version change: uninitialized -> 1.0.0 (initial project constitution)
+Modified principles: none; all five principles are newly established
+Added sections: Core Principles, Technical Constraints, Development Workflow, Governance
+Removed sections: none
+Follow-up TODO: Confirm the original ratification date.
+-->
+# Course Web Application Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### I. Specification First
+Define each feature's user-visible behavior and acceptance criteria before implementation. Keep
+the specification current when decisions or scope change. This gives students a clear target and
+makes progress reviewable.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### II. Student Ownership
+AI tools may assist with any project activity, but each student MUST understand, explain, and take
+responsibility for all submitted work, including AI-generated code. Verify suggestions and never
+submit code whose behavior or purpose you cannot describe.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### III. Incremental Delivery
+Implement one small, specified behavior at a time. Keep the application runnable, and check each
+change against its acceptance criteria before starting dependent work. Small steps make defects
+easier to find and demonstrate progress.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### IV. Clear Project History
+Use meaningful Git commits that describe a focused change. Record important design decisions and
+their rationale in project documentation so future work can follow the reasoning.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### V. Working, Understandable Quality
+Check changed behavior in the browser and use automated tests where practical. Keep HTML semantic,
+interfaces usable with keyboard and assistive technology, and code simple enough for the team to
+maintain. Fix defects that block specified behavior before marking a feature complete.
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+## Technical Constraints
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
+Build the application with HTML, CSS, and JavaScript. Keep dependencies and abstractions minimal;
+introduce them only when they solve a demonstrated project need. Do not commit credentials or
+private student data.
 
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
+## Development Workflow
 
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+For each feature, write or update its specification, implement it in small steps, verify the
+result against acceptance criteria, and commit the completed change with a meaningful message.
+Update decision documentation when a significant design choice is made. Before submission, check
+that the application runs and that documented behavior matches the implementation.
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+This constitution governs project planning and implementation. Amend it when course requirements
+or team decisions change; document the reason and record the amendment in Git. Use semantic
+versioning: MAJOR for incompatible rule changes, MINOR for new or materially expanded rules, and
+PATCH for clarifications that do not change obligations. Review compliance when planning and
+accepting features, and explain any exception in the project documentation. Students remain
+accountable for the correctness and understanding of submitted work, regardless of tool use.
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 1.0.0 | **Ratified**: TODO(RATIFICATION_DATE) | **Last Amended**: 2026-09-26
