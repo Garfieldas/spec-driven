@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f4f6f1">
+    <title>Task List</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <main class="task-app" aria-labelledby="page-title">
+      <header class="page-header">
+        <p class="eyebrow">A small step at a time</p>
+        <h1 id="page-title">Task list</h1>
+      </header>
+
+      <section class="task-entry" aria-labelledby="entry-heading">
+        <h2 id="entry-heading">Add a task</h2>
+        <form id="task-form" novalidate>
+          <label for="task-description">What needs doing?</label>
+          <div class="entry-controls">
+            <input
+              id="task-description"
+              name="description"
+              type="text"
+              autocomplete="off"
+              aria-required="true"
+              aria-describedby="task-error"
+            >
+            <button type="submit">Add task</button>
+          </div>
+          <p id="task-error" class="message message-error" role="alert" hidden></p>
+        </form>
+      </section>
+
+      <section class="task-list-section" aria-labelledby="tasks-heading">
+        <div class="list-heading">
+          <h2 id="tasks-heading">Tasks</h2>
+          <span id="task-count" class="task-count" aria-label="0 tasks">0</span>
+        </div>
+        <ul id="task-list" class="task-list"></ul>
+        <p id="empty-state" class="empty-state">Nothing on the list yet.</p>
+        <p id="task-status" class="visually-hidden" role="status" aria-live="polite" aria-atomic="true"></p>
+      </section>
+    </main>
+  </body>
+</html>

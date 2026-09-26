@@ -22,7 +22,7 @@ description: "Implementation tasks for the Add Tasks feature"
 
 **Purpose**: Create the static application entry point; no package installation or build tooling is required.
 
-- [ ] T001 Create the root `index.html` document shell with page metadata and links to `styles.css` and deferred `app.js`.
+- [X] T001 Create the root `index.html` document shell with page metadata and links to `styles.css` and deferred `app.js`.
 
 ---
 
@@ -42,21 +42,21 @@ No separate foundational tasks are needed. This feature has one user story and n
 
 ### UI and Presentation
 
-- [ ] T002 [P] [US1] Add the task form, visible label, single-line description input, Add submit button, task list, and accessible error/status elements with stable IDs in `index.html`.
-- [ ] T003 [P] [US1] Style the task form, list, validation/status messages, responsive layout, and visible keyboard focus states in `styles.css`.
+- [X] T002 [P] [US1] Add the task form, visible label, single-line description input, Add submit button, task list, and accessible error/status elements with stable IDs in `index.html`.
+- [X] T003 [P] [US1] Style the task form, list, validation/status messages, responsive layout, and visible keyboard focus states in `styles.css`.
 
 ### State and Validation
 
-- [ ] T004 [US1] Add an initially empty in-memory task array and a list-rendering function that creates list items using text content in `app.js`.
-- [ ] T005 [US1] Handle form submission in `app.js`: prevent page navigation, trim and reject blank descriptions with accessible feedback, append valid tasks through the renderer, clear the input, and announce success.
+- [X] T004 [US1] Add an initially empty in-memory task array and a list-rendering function that creates list items using text content in `app.js`.
+- [X] T005 [US1] Handle form submission in `app.js`: prevent page navigation, trim and reject blank descriptions with accessible feedback, append valid tasks through the renderer, clear the input, and announce success.
 
 ### Browser Testing
 
-- [ ] T006 [P] [US1] Run the valid, empty/whitespace, trim, literal-markup, keyboard, no-refresh, accessibility, and reload checks from `specs/001-add-tasks/quickstart.md`; record outcomes in that file.
+- [X] T006 [P] [US1] Run the valid, empty/whitespace, trim, literal-markup, keyboard, no-refresh, accessibility, and reload checks from `specs/001-add-tasks/quickstart.md`; record outcomes in that file.
 
 ### Documentation
 
-- [ ] T007 [P] [US1] Document how to open the static application and its current-page-only task lifetime in the root `README.md`.
+- [X] T007 [P] [US1] Document how to open the static application and its current-page-only task lifetime in the root `README.md`.
 
 **Checkpoint**: User Story 1 is complete when the form, validation, list update, browser checks, and run documentation are finished.
 

@@ -36,3 +36,19 @@ Alternatively, open `index.html` directly in a browser. The page should load wit
 9. Use a screen reader or browser accessibility inspection. Expected: the input has an associated
    label, and validation and success feedback are exposed as status messages.
 10. Reload the page. Expected: tasks are gone; persistence is not part of this feature.
+
+## Verification Record
+
+Verified in the integrated Chromium browser on 2026-09-26:
+
+- Empty, spaces-only, tabs-only, and line-break-only values each showed the required error and
+   added no item.
+- A valid description with surrounding whitespace appeared trimmed; correction after rejection
+   succeeded.
+- HTML-looking text appeared literally, with no parsed formatting element.
+- Enter submission added one task, and ten consecutive valid submissions added ten items in
+   210 ms without changing the page URL.
+- Reload cleared all tasks. At 390 px and 1280 px viewport widths there was no horizontal
+   overflow.
+- Browser inspection confirmed the visible input label and the error (`alert`) and success
+   (`status`) announcement roles. A manual screen-reader audit was not performed.
